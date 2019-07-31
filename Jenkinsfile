@@ -39,7 +39,7 @@ pipeline{
                   {
         
                      //sh 'curl -u  $userId:$pass  http://ec2-3-130-89-18.us-east-2.compute.amazonaws.com:8080/manager/text/undeploy?path=/superemp'
-                     sh  'curl -u  $userId:$pass --upload-file target/xfs-0.0.1-SNAPSHOT.war http://http://ec2-13-233-78-62.ap-south-1.compute.amazonaws.com:8080/manager/text/deploy?config=file:/var/lib/tomcat8/xfs-0.0.1-SNAPSHOT.war\\&path=/Backend_XFS'
+                     sh  'curl -u  $userId:$pass --upload-file target/xfs-0.0.1-SNAPSHOT.war http://ec2-13-233-78-62.ap-south-1.compute.amazonaws.com:8080/manager/text/deploy?config=file:/var/lib/tomcat8/xfs-0.0.1-SNAPSHOT.war\\&path=/Backend_XFS'
                  }
              }
     
