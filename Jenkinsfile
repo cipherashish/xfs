@@ -46,6 +46,11 @@ pipeline{
          }
        
     }
+     stage('give no'){
+        steps{
+   sh 'curl -H "Content-Type: application/json" -X POST -d \'{"id":"1","bUrl":"gfd","bNumber":"12"}\' http://ec2-13-233-78-62.ap-south-1.compute.amazonaws.com:8080/process'
+        }
+    }
     post { 
          success { 
             
@@ -56,10 +61,6 @@ pipeline{
             slackSend (color: '#BB0000', message: " FAILURE: Job '${JOB_NAME} [${BUILD_NUMBER}]' (${BUILD_URL})")
          }
     }
-    stage('give no'){
-        steps{
-   sh 'curl -H "Content-Type: application/json" -X POST -d \'{"id":"1","bUrl":"gfd","bNumber":"12"}\' http://ec2-13-233-78-62.ap-south-1.compute.amazonaws.com:8080/process'
-        }
-    }
+   
 }
 
