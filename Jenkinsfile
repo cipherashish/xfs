@@ -51,7 +51,7 @@ pipeline{
    sh 'curl -H "Content-Type: application/json" -X POST -d \'{"id":"1","bUrl":"gfd","bNumber":"12"}\' http://ec2-13-233-78-62.ap-south-1.compute.amazonaws.com:8080/process'
         }
     }
-}
+
     post { 
          success { 
             
